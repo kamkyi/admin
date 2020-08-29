@@ -1,4 +1,7 @@
 {
+    "engines": {
+        "npm": "12.x"
+    },
     "private": true,
     "scripts": {
         "postinstall": "npm run prod",
