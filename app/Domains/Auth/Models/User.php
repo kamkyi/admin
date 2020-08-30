@@ -17,6 +17,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Lab404\Impersonate\Models\Impersonate;
 use Spatie\Permission\Traits\HasRoles;
+use Laravel\Passport\HasApiTokens;
 
 /**
  * Class User.
@@ -32,7 +33,8 @@ class User extends Authenticatable implements MustVerifyEmail, TwoFactorAuthenti
         UserAttribute,
         UserMethod,
         UserRelationship,
-        UserScope;
+        UserScope,
+        HasApiTokens;
 
     public const TYPE_ADMIN = 'admin';
     public const TYPE_USER = 'user';
