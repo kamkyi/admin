@@ -12,6 +12,7 @@
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="{{ mix('css/frontend.css') }}" rel="stylesheet">
+        @livewireStyles
         <style>
             html, body {
                 background-color: #fff;
@@ -96,6 +97,7 @@
                 <div class="title m-b-md">
                     <example-component></example-component>
                 </div><!--title-->
+                <livewire:test.counter/>
             </div><!--content-->
         </div><!--app-->
 
@@ -104,5 +106,6 @@
         <script src="{{ mix('js/vendor.js') }}"></script>
         <script src="{{ mix('js/frontend.js') }}"></script>
         @stack('after-scripts')
+        @livewireScripts
     </body>
 </html>

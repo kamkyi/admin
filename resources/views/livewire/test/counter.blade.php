@@ -1,3 +1,7 @@
 <div>
-    {{-- Because she competes with no one, no one can compete with her. --}}
+     <button class="btn btn-danger" wire:click="decrement">-</button>
+     <span class="btn btn-primary">
+        {{ $counter }}
+     </span>
+     <button class="btn btn-success" wire:click="increment">+</button>
 </div>
