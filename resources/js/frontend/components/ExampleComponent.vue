@@ -1,5 +1,5 @@
 <template>
-    <span>Laravel Boilerplate</span>
+    <span>Anyar Business</span>
 </template>
 
 <script>
