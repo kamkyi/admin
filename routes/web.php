@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\LocaleController;
 
+Route::get('/todos','TodoController@index');
+
 /*
  * Global Routes
  *

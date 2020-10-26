@@ -97,7 +97,6 @@
                 <div class="title m-b-md">
                     <example-component></example-component>
                 </div><!--title-->
-                <livewire:test.counter/>
             </div><!--content-->
         </div><!--app-->
 
