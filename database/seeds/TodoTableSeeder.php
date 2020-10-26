@@ -12,6 +12,11 @@ class TodoTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Todo::class,1)->create();
+        Todo::create([
+            'user_id' => 1,
+            'title' => 'တီဗီကြည့်မယ်',
+            'completed' => false
+        ]);
+       // factory(Todo::class,1)->create();
     }
 }
