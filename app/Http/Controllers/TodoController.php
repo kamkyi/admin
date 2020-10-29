@@ -16,7 +16,7 @@ class TodoController extends Controller
     public function index(Request $request)
     {
         $todos = Todo::orderBy('id','desc')->get();
-        
+
         return new TodoResource($todos);
     }
 
@@ -90,7 +90,12 @@ class TodoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $todo = Todo::find($id);
+        $todo->title = $request->title;
+        $todo->completed = $request->completed;
+        $todo->save();
+
+        return new TodoResource($todo);
     }
 
     /**

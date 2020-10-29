@@ -8,5 +8,7 @@ class Todo extends Model
 {
     protected $table = 'todos';
 
+    protected $primaryKey = 'id';
+
     protected $fillable = ['user_id','title','completed'];
 }
