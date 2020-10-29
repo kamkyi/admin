@@ -13,9 +13,23 @@ class TodoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return new TodoResource(Todo::get());
+        $todos = Todo::orderBy('id','desc')->get();
+        
+        return new TodoResource($todos);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function filter(Request $request)
+    {
+        $todos = Todo::orderBy('id','desc')->take($request->_limit)->get();
+
+        return new TodoResource($todos);
     }
 
     /**
@@ -23,9 +37,15 @@ class TodoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        if(Todo::create([
+            'user_id' => 1,
+            'title' => $request->title,
+            'completed' => $request->completed
+        ])){
+            return new TodoResource(Todo::orderBy('id','desc')->get());
+        }
     }
 
     /**
@@ -79,8 +99,10 @@ class TodoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        if(Todo::find($request->_id)->delete()){
+            return new TodoResource(Todo::orderBy('id','desc')->get());
+        }
     }
 }

@@ -18,3 +18,9 @@ use Illuminate\Http\Request;
 //});
 
 Route::get('/todos','TodoController@index');
+
+Route::get('/filter','TodoController@filter');
+
+Route::post('/create','TodoController@create');
+
+Route::delete('/todos/delete','TodoController@destroy');
