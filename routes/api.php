@@ -26,3 +26,9 @@ Route::post('/create','TodoController@create');
 Route::delete('/todos/delete','TodoController@destroy');
 
 Route::put('/todo/update/{id}','TodoController@update');
+
+/**Route for login API */
+Route::post('/login', 'Api\ApiController@login');
+
+/**Route for register API */
+Route::post('/register', 'Api\ApiController@register');

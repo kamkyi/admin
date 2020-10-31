@@ -26,3 +26,15 @@ Route::group(['as' => 'frontend.'], function () {
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function () {
     includeRouteFiles(__DIR__.'/backend/');
 });
+
+/*
+ * Api Routes
+ *
+ * These routes can only be accessed by users with type `admin`
+ */
+
+Route::group(['prefix' => 'api', 'as' => 'api.', 'middleware' => 'auth:api'], function () {
+    includeRouteFiles(__DIR__.'/api/');
+});
+
+
