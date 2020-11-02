@@ -30,5 +30,7 @@ Route::put('/todo/update/{id}','TodoController@update');
 /**Route for login API */
 Route::post('/login', 'Api\ApiController@login');
 
+Route::post('/logout', 'Api\ApiController@logout');
+
 /**Route for register API */
 Route::post('/register', 'Api\ApiController@register');

@@ -73,7 +73,7 @@ class ApiController extends Controller
         return response()->json(['success'=>$success], 200);
     }
 
-    public function user_info()
+    public function userInfo()
     {
     /**Retrieve the information of the authenticated user
         */
@@ -81,5 +81,9 @@ class ApiController extends Controller
         /** Return user's details
         */
         return response()->json(['success' => $user], 200);
+    }
+
+    public function logout(){
+        auth()->logout();
     }
 }
