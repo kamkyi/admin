@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
             'type' => User::TYPE_ADMIN,
             'name' => 'Super Admin',
             'email' => 'admin@admin.com',
-            'password' => '12345678',
+            'password' => 'control7',
             'email_verified_at' => now(),
             'active' => true,
         ]);
@@ -31,7 +31,7 @@ class UserSeeder extends Seeder
             'type' => User::TYPE_USER,
             'name' => 'Test User',
             'email' => 'user@user.com',
-            'password' => '12345678',
+            'password' => 'control7',
             'email_verified_at' => now(),
             'active' => true,
         ]);
@@ -41,7 +41,7 @@ class UserSeeder extends Seeder
             //     'type' => User::TYPE_USER,
             //     'name' => 'Test User',
             //     'email' => 'user@user.com',
-            //     'password' => '12345678',
+            //     'password' => 'control7',
             //     'email_verified_at' => now(),
             //     'active' => true,
             // ]);
