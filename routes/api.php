@@ -19,6 +19,8 @@ use Illuminate\Http\Request;
 
 Route::get('/todos','TodoController@index');
 
+Route::post('/uploadFile','TodoController@uploadFile');
+
 Route::get('/filter','TodoController@filter');
 
 Route::post('/create','TodoController@create');
